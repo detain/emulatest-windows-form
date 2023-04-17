@@ -388,7 +388,6 @@
             this.Controls.Add(this.PathsGroup);
             this.Name = "MainWindow";
             this.Text = "Emulatest";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.PathsGroup.ResumeLayout(false);
             this.LogGroup.ResumeLayout(false);
             this.BucketsGroup.ResumeLayout(false);
