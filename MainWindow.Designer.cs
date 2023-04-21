@@ -37,9 +37,9 @@
             this.LogGroup = new System.Windows.Forms.GroupBox();
             this.LogText = new System.Windows.Forms.RichTextBox();
             this.BucketsGroup = new System.Windows.Forms.GroupBox();
+            this.BucketDescriptionText = new System.Windows.Forms.TextBox();
             this.BucketLogoLabel = new System.Windows.Forms.Label();
             this.BucketLogoImage = new System.Windows.Forms.PictureBox();
-            this.BucketDescriptionText = new System.Windows.Forms.Label();
             this.BucketDescriptionLabel = new System.Windows.Forms.Label();
             this.BucketVersionText = new System.Windows.Forms.Label();
             this.BucketVersionLabel = new System.Windows.Forms.Label();
@@ -132,7 +132,7 @@
             this.LogGroup.Controls.Add(this.LogText);
             this.LogGroup.Location = new System.Drawing.Point(12, 12);
             this.LogGroup.Name = "LogGroup";
-            this.LogGroup.Size = new System.Drawing.Size(286, 143);
+            this.LogGroup.Size = new System.Drawing.Size(293, 236);
             this.LogGroup.TabIndex = 2;
             this.LogGroup.TabStop = false;
             this.LogGroup.Text = "Log";
@@ -141,15 +141,16 @@
             // 
             this.LogText.Location = new System.Drawing.Point(6, 19);
             this.LogText.Name = "LogText";
-            this.LogText.Size = new System.Drawing.Size(274, 118);
+            this.LogText.ReadOnly = true;
+            this.LogText.Size = new System.Drawing.Size(280, 211);
             this.LogText.TabIndex = 0;
             this.LogText.Text = "";
             // 
             // BucketsGroup
             // 
+            this.BucketsGroup.Controls.Add(this.BucketDescriptionText);
             this.BucketsGroup.Controls.Add(this.BucketLogoLabel);
             this.BucketsGroup.Controls.Add(this.BucketLogoImage);
-            this.BucketsGroup.Controls.Add(this.BucketDescriptionText);
             this.BucketsGroup.Controls.Add(this.BucketDescriptionLabel);
             this.BucketsGroup.Controls.Add(this.BucketVersionText);
             this.BucketsGroup.Controls.Add(this.BucketVersionLabel);
@@ -171,6 +172,15 @@
             this.BucketsGroup.TabStop = false;
             this.BucketsGroup.Text = "Emulators Database";
             // 
+            // BucketDescriptionText
+            // 
+            this.BucketDescriptionText.Location = new System.Drawing.Point(155, 140);
+            this.BucketDescriptionText.Multiline = true;
+            this.BucketDescriptionText.Name = "BucketDescriptionText";
+            this.BucketDescriptionText.ReadOnly = true;
+            this.BucketDescriptionText.Size = new System.Drawing.Size(200, 64);
+            this.BucketDescriptionText.TabIndex = 17;
+            // 
             // BucketLogoLabel
             // 
             this.BucketLogoLabel.AutoSize = true;
@@ -188,19 +198,10 @@
             this.BucketLogoImage.TabIndex = 15;
             this.BucketLogoImage.TabStop = false;
             // 
-            // BucketDescriptionText
-            // 
-            this.BucketDescriptionText.AutoSize = true;
-            this.BucketDescriptionText.Location = new System.Drawing.Point(404, 19);
-            this.BucketDescriptionText.Name = "BucketDescriptionText";
-            this.BucketDescriptionText.Size = new System.Drawing.Size(10, 13);
-            this.BucketDescriptionText.TabIndex = 14;
-            this.BucketDescriptionText.Text = "-";
-            // 
             // BucketDescriptionLabel
             // 
             this.BucketDescriptionLabel.AutoSize = true;
-            this.BucketDescriptionLabel.Location = new System.Drawing.Point(336, 19);
+            this.BucketDescriptionLabel.Location = new System.Drawing.Point(156, 124);
             this.BucketDescriptionLabel.Name = "BucketDescriptionLabel";
             this.BucketDescriptionLabel.Size = new System.Drawing.Size(60, 13);
             this.BucketDescriptionLabel.TabIndex = 13;
@@ -211,9 +212,8 @@
             this.BucketVersionText.AutoSize = true;
             this.BucketVersionText.Location = new System.Drawing.Point(224, 104);
             this.BucketVersionText.Name = "BucketVersionText";
-            this.BucketVersionText.Size = new System.Drawing.Size(10, 13);
+            this.BucketVersionText.Size = new System.Drawing.Size(0, 13);
             this.BucketVersionText.TabIndex = 12;
-            this.BucketVersionText.Text = "-";
             // 
             // BucketVersionLabel
             // 
@@ -227,34 +227,32 @@
             // BucketsLoadedText
             // 
             this.BucketsLoadedText.AutoSize = true;
-            this.BucketsLoadedText.Location = new System.Drawing.Point(290, 184);
+            this.BucketsLoadedText.Location = new System.Drawing.Point(372, 44);
             this.BucketsLoadedText.Name = "BucketsLoadedText";
-            this.BucketsLoadedText.Size = new System.Drawing.Size(10, 13);
+            this.BucketsLoadedText.Size = new System.Drawing.Size(0, 13);
             this.BucketsLoadedText.TabIndex = 10;
-            this.BucketsLoadedText.Text = "-";
             // 
             // BucketsLoadedLabel
             // 
             this.BucketsLoadedLabel.AutoSize = true;
-            this.BucketsLoadedLabel.Location = new System.Drawing.Point(155, 184);
+            this.BucketsLoadedLabel.Location = new System.Drawing.Point(313, 44);
             this.BucketsLoadedLabel.Name = "BucketsLoadedLabel";
-            this.BucketsLoadedLabel.Size = new System.Drawing.Size(129, 13);
+            this.BucketsLoadedLabel.Size = new System.Drawing.Size(56, 13);
             this.BucketsLoadedLabel.TabIndex = 9;
-            this.BucketsLoadedLabel.Text = "Emulator Buckets Loaded";
+            this.BucketsLoadedLabel.Text = "# Buckets";
             // 
             // EmulatorsCountText
             // 
             this.EmulatorsCountText.AutoSize = true;
-            this.EmulatorsCountText.Location = new System.Drawing.Point(226, 162);
+            this.EmulatorsCountText.Location = new System.Drawing.Point(372, 22);
             this.EmulatorsCountText.Name = "EmulatorsCountText";
-            this.EmulatorsCountText.Size = new System.Drawing.Size(10, 13);
+            this.EmulatorsCountText.Size = new System.Drawing.Size(0, 13);
             this.EmulatorsCountText.TabIndex = 8;
-            this.EmulatorsCountText.Text = "-";
             // 
             // EmulatorsCountLabel
             // 
             this.EmulatorsCountLabel.AutoSize = true;
-            this.EmulatorsCountLabel.Location = new System.Drawing.Point(156, 162);
+            this.EmulatorsCountLabel.Location = new System.Drawing.Point(306, 22);
             this.EmulatorsCountLabel.Name = "EmulatorsCountLabel";
             this.EmulatorsCountLabel.Size = new System.Drawing.Size(63, 13);
             this.EmulatorsCountLabel.TabIndex = 7;
@@ -265,9 +263,8 @@
             this.BucketHomeText.AutoSize = true;
             this.BucketHomeText.Location = new System.Drawing.Point(224, 75);
             this.BucketHomeText.Name = "BucketHomeText";
-            this.BucketHomeText.Size = new System.Drawing.Size(10, 13);
+            this.BucketHomeText.Size = new System.Drawing.Size(0, 13);
             this.BucketHomeText.TabIndex = 6;
-            this.BucketHomeText.Text = "-";
             // 
             // BucketHomeLabel
             // 
@@ -283,9 +280,8 @@
             this.BucketLicenseText.AutoSize = true;
             this.BucketLicenseText.Location = new System.Drawing.Point(224, 48);
             this.BucketLicenseText.Name = "BucketLicenseText";
-            this.BucketLicenseText.Size = new System.Drawing.Size(10, 13);
+            this.BucketLicenseText.Size = new System.Drawing.Size(0, 13);
             this.BucketLicenseText.TabIndex = 4;
-            this.BucketLicenseText.Text = "-";
             // 
             // BucketLicenseLabel
             // 
@@ -301,9 +297,8 @@
             this.BucketNameText.AutoSize = true;
             this.BucketNameText.Location = new System.Drawing.Point(224, 19);
             this.BucketNameText.Name = "BucketNameText";
-            this.BucketNameText.Size = new System.Drawing.Size(10, 13);
+            this.BucketNameText.Size = new System.Drawing.Size(0, 13);
             this.BucketNameText.TabIndex = 2;
-            this.BucketNameText.Text = "-";
             // 
             // BucketNameLabel
             // 
@@ -343,6 +338,7 @@
             this.NewVersion});
             this.EmulatorsTable.Location = new System.Drawing.Point(6, 19);
             this.EmulatorsTable.Name = "EmulatorsTable";
+            this.EmulatorsTable.ReadOnly = true;
             this.EmulatorsTable.Size = new System.Drawing.Size(554, 150);
             this.EmulatorsTable.TabIndex = 0;
             // 
@@ -350,6 +346,7 @@
             // 
             this.Select.HeaderText = "";
             this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
             this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Select.Width = 30;
             // 
@@ -357,24 +354,28 @@
             // 
             this.Path.HeaderText = "Path";
             this.Path.Name = "Path";
+            this.Path.ReadOnly = true;
             this.Path.Width = 200;
             // 
             // Emulator
             // 
             this.Emulator.HeaderText = "Emulator";
             this.Emulator.Name = "Emulator";
+            this.Emulator.ReadOnly = true;
             this.Emulator.Width = 120;
             // 
             // CurrentVersion
             // 
             this.CurrentVersion.HeaderText = "Current Version";
             this.CurrentVersion.Name = "CurrentVersion";
+            this.CurrentVersion.ReadOnly = true;
             this.CurrentVersion.Width = 80;
             // 
             // NewVersion
             // 
             this.NewVersion.HeaderText = "New Version";
             this.NewVersion.Name = "NewVersion";
+            this.NewVersion.ReadOnly = true;
             this.NewVersion.Width = 80;
             // 
             // MainWindow
@@ -422,7 +423,6 @@
         private System.Windows.Forms.Label BucketHomeLabel;
         private System.Windows.Forms.Label BucketLicenseText;
         private System.Windows.Forms.Label BucketLicenseLabel;
-        private System.Windows.Forms.Label BucketDescriptionText;
         private System.Windows.Forms.Label BucketDescriptionLabel;
         private System.Windows.Forms.Label BucketVersionText;
         private System.Windows.Forms.Label BucketVersionLabel;
@@ -433,6 +433,7 @@
         private System.Windows.Forms.Label BucketLogoLabel;
         private System.Windows.Forms.PictureBox BucketLogoImage;
         private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.TextBox BucketDescriptionText;
     }
 }
 
