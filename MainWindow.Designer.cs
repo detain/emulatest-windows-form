@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace EmulatestApp
 {
     partial class MainWindow
     {
@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.splitContainerMain = new System.Windows.Forms.SplitContainer();
+            this.splitContainerLeft = new System.Windows.Forms.SplitContainer();
+            this.LogGroup = new System.Windows.Forms.GroupBox();
+            this.LogText = new System.Windows.Forms.RichTextBox();
             this.PathsGroup = new System.Windows.Forms.GroupBox();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.ScanPathButton = new System.Windows.Forms.Button();
             this.RemovePathButton = new System.Windows.Forms.Button();
             this.AddPathButton = new System.Windows.Forms.Button();
             this.PathsList = new System.Windows.Forms.ListBox();
-            this.LogGroup = new System.Windows.Forms.GroupBox();
-            this.LogText = new System.Windows.Forms.RichTextBox();
+            this.splitContainerRight = new System.Windows.Forms.SplitContainer();
             this.BucketsGroup = new System.Windows.Forms.GroupBox();
             this.BucketDescriptionText = new System.Windows.Forms.TextBox();
             this.BucketLogoLabel = new System.Windows.Forms.Label();
@@ -61,31 +65,104 @@
             this.Emulator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NewVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PathsGroup.SuspendLayout();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
+            this.splitContainerMain.Panel1.SuspendLayout();
+            this.splitContainerMain.Panel2.SuspendLayout();
+            this.splitContainerMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerLeft)).BeginInit();
+            this.splitContainerLeft.Panel1.SuspendLayout();
+            this.splitContainerLeft.Panel2.SuspendLayout();
+            this.splitContainerLeft.SuspendLayout();
             this.LogGroup.SuspendLayout();
+            this.PathsGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerRight)).BeginInit();
+            this.splitContainerRight.Panel1.SuspendLayout();
+            this.splitContainerRight.Panel2.SuspendLayout();
+            this.splitContainerRight.SuspendLayout();
             this.BucketsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BucketLogoImage)).BeginInit();
             this.EmulatorsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmulatorsTable)).BeginInit();
             this.SuspendLayout();
             // 
+            // splitContainerMain
+            // 
+            this.splitContainerMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerMain.Location = new System.Drawing.Point(5, 5);
+            this.splitContainerMain.Name = "splitContainerMain";
+            // 
+            // splitContainerMain.Panel1
+            // 
+            this.splitContainerMain.Panel1.Controls.Add(this.splitContainerLeft);
+            // 
+            // splitContainerMain.Panel2
+            // 
+            this.splitContainerMain.Panel2.Controls.Add(this.splitContainerRight);
+            this.splitContainerMain.Size = new System.Drawing.Size(1042, 614);
+            this.splitContainerMain.SplitterDistance = 347;
+            this.splitContainerMain.TabIndex = 0;
+            // 
+            // splitContainerLeft
+            // 
+            this.splitContainerLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerLeft.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerLeft.Name = "splitContainerLeft";
+            this.splitContainerLeft.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerLeft.Panel1
+            // 
+            this.splitContainerLeft.Panel1.Controls.Add(this.LogGroup);
+            // 
+            // splitContainerLeft.Panel2
+            // 
+            this.splitContainerLeft.Panel2.Controls.Add(this.PathsGroup);
+            this.splitContainerLeft.Size = new System.Drawing.Size(347, 614);
+            this.splitContainerLeft.SplitterDistance = 286;
+            this.splitContainerLeft.TabIndex = 0;
+            // 
+            // LogGroup
+            // 
+            this.LogGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LogGroup.Controls.Add(this.LogText);
+            this.LogGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogGroup.Location = new System.Drawing.Point(0, 0);
+            this.LogGroup.Name = "LogGroup";
+            this.LogGroup.Size = new System.Drawing.Size(347, 286);
+            this.LogGroup.TabIndex = 3;
+            this.LogGroup.TabStop = false;
+            this.LogGroup.Text = "Log";
+            // 
+            // LogText
+            // 
+            this.LogText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogText.Location = new System.Drawing.Point(3, 16);
+            this.LogText.Name = "LogText";
+            this.LogText.ReadOnly = true;
+            this.LogText.Size = new System.Drawing.Size(341, 267);
+            this.LogText.TabIndex = 0;
+            this.LogText.Text = "";
+            // 
             // PathsGroup
             // 
+            this.PathsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PathsGroup.Controls.Add(this.UpdateButton);
             this.PathsGroup.Controls.Add(this.ScanPathButton);
             this.PathsGroup.Controls.Add(this.RemovePathButton);
             this.PathsGroup.Controls.Add(this.AddPathButton);
             this.PathsGroup.Controls.Add(this.PathsList);
-            this.PathsGroup.Location = new System.Drawing.Point(12, 254);
+            this.PathsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PathsGroup.Location = new System.Drawing.Point(0, 0);
             this.PathsGroup.Name = "PathsGroup";
-            this.PathsGroup.Size = new System.Drawing.Size(292, 145);
-            this.PathsGroup.TabIndex = 1;
+            this.PathsGroup.Size = new System.Drawing.Size(347, 324);
+            this.PathsGroup.TabIndex = 2;
             this.PathsGroup.TabStop = false;
             this.PathsGroup.Text = "Scan Paths";
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(203, 107);
+            this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateButton.Location = new System.Drawing.Point(262, 107);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(83, 23);
             this.UpdateButton.TabIndex = 4;
@@ -94,7 +171,8 @@
             // 
             // ScanPathButton
             // 
-            this.ScanPathButton.Location = new System.Drawing.Point(202, 77);
+            this.ScanPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ScanPathButton.Location = new System.Drawing.Point(261, 77);
             this.ScanPathButton.Name = "ScanPathButton";
             this.ScanPathButton.Size = new System.Drawing.Size(84, 23);
             this.ScanPathButton.TabIndex = 3;
@@ -103,7 +181,8 @@
             // 
             // RemovePathButton
             // 
-            this.RemovePathButton.Location = new System.Drawing.Point(202, 48);
+            this.RemovePathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RemovePathButton.Location = new System.Drawing.Point(261, 48);
             this.RemovePathButton.Name = "RemovePathButton";
             this.RemovePathButton.Size = new System.Drawing.Size(84, 23);
             this.RemovePathButton.TabIndex = 2;
@@ -112,7 +191,8 @@
             // 
             // AddPathButton
             // 
-            this.AddPathButton.Location = new System.Drawing.Point(202, 19);
+            this.AddPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddPathButton.Location = new System.Drawing.Point(261, 19);
             this.AddPathButton.Name = "AddPathButton";
             this.AddPathButton.Size = new System.Drawing.Size(84, 23);
             this.AddPathButton.TabIndex = 1;
@@ -121,33 +201,34 @@
             // 
             // PathsList
             // 
+            this.PathsList.Dock = System.Windows.Forms.DockStyle.Left;
             this.PathsList.FormattingEnabled = true;
-            this.PathsList.Location = new System.Drawing.Point(6, 19);
+            this.PathsList.Location = new System.Drawing.Point(3, 16);
             this.PathsList.Name = "PathsList";
-            this.PathsList.Size = new System.Drawing.Size(190, 108);
+            this.PathsList.Size = new System.Drawing.Size(232, 305);
             this.PathsList.TabIndex = 0;
             // 
-            // LogGroup
+            // splitContainerRight
             // 
-            this.LogGroup.Controls.Add(this.LogText);
-            this.LogGroup.Location = new System.Drawing.Point(12, 12);
-            this.LogGroup.Name = "LogGroup";
-            this.LogGroup.Size = new System.Drawing.Size(293, 236);
-            this.LogGroup.TabIndex = 2;
-            this.LogGroup.TabStop = false;
-            this.LogGroup.Text = "Log";
+            this.splitContainerRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerRight.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerRight.Name = "splitContainerRight";
+            this.splitContainerRight.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // LogText
+            // splitContainerRight.Panel1
             // 
-            this.LogText.Location = new System.Drawing.Point(6, 19);
-            this.LogText.Name = "LogText";
-            this.LogText.ReadOnly = true;
-            this.LogText.Size = new System.Drawing.Size(280, 211);
-            this.LogText.TabIndex = 0;
-            this.LogText.Text = "";
+            this.splitContainerRight.Panel1.Controls.Add(this.BucketsGroup);
+            // 
+            // splitContainerRight.Panel2
+            // 
+            this.splitContainerRight.Panel2.Controls.Add(this.EmulatorsGroup);
+            this.splitContainerRight.Size = new System.Drawing.Size(691, 614);
+            this.splitContainerRight.SplitterDistance = 220;
+            this.splitContainerRight.TabIndex = 0;
             // 
             // BucketsGroup
             // 
+            this.BucketsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BucketsGroup.Controls.Add(this.BucketDescriptionText);
             this.BucketsGroup.Controls.Add(this.BucketLogoLabel);
             this.BucketsGroup.Controls.Add(this.BucketLogoImage);
@@ -165,10 +246,11 @@
             this.BucketsGroup.Controls.Add(this.BucketNameText);
             this.BucketsGroup.Controls.Add(this.BucketNameLabel);
             this.BucketsGroup.Controls.Add(this.BucketsList);
-            this.BucketsGroup.Location = new System.Drawing.Point(311, 12);
+            this.BucketsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BucketsGroup.Location = new System.Drawing.Point(0, 0);
             this.BucketsGroup.Name = "BucketsGroup";
-            this.BucketsGroup.Size = new System.Drawing.Size(566, 210);
-            this.BucketsGroup.TabIndex = 3;
+            this.BucketsGroup.Size = new System.Drawing.Size(691, 220);
+            this.BucketsGroup.TabIndex = 4;
             this.BucketsGroup.TabStop = false;
             this.BucketsGroup.Text = "Emulators Database";
             // 
@@ -319,11 +401,13 @@
             // 
             // EmulatorsGroup
             // 
+            this.EmulatorsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EmulatorsGroup.Controls.Add(this.EmulatorsTable);
-            this.EmulatorsGroup.Location = new System.Drawing.Point(311, 228);
+            this.EmulatorsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmulatorsGroup.Location = new System.Drawing.Point(0, 0);
             this.EmulatorsGroup.Name = "EmulatorsGroup";
-            this.EmulatorsGroup.Size = new System.Drawing.Size(566, 168);
-            this.EmulatorsGroup.TabIndex = 4;
+            this.EmulatorsGroup.Size = new System.Drawing.Size(691, 390);
+            this.EmulatorsGroup.TabIndex = 5;
             this.EmulatorsGroup.TabStop = false;
             this.EmulatorsGroup.Text = "Discovered Emulators";
             // 
@@ -336,10 +420,11 @@
             this.Emulator,
             this.CurrentVersion,
             this.NewVersion});
-            this.EmulatorsTable.Location = new System.Drawing.Point(6, 19);
+            this.EmulatorsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmulatorsTable.Location = new System.Drawing.Point(3, 16);
             this.EmulatorsTable.Name = "EmulatorsTable";
             this.EmulatorsTable.ReadOnly = true;
-            this.EmulatorsTable.Size = new System.Drawing.Size(554, 150);
+            this.EmulatorsTable.Size = new System.Drawing.Size(685, 371);
             this.EmulatorsTable.TabIndex = 0;
             // 
             // Select
@@ -378,19 +463,36 @@
             this.NewVersion.ReadOnly = true;
             this.NewVersion.Width = 80;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 411);
-            this.Controls.Add(this.EmulatorsGroup);
-            this.Controls.Add(this.BucketsGroup);
-            this.Controls.Add(this.LogGroup);
-            this.Controls.Add(this.PathsGroup);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1052, 624);
+            this.Controls.Add(this.splitContainerMain);
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "MainWindow";
-            this.Text = "Emulatest";
-            this.PathsGroup.ResumeLayout(false);
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Text = "EmuLatest";
+            this.splitContainerMain.Panel1.ResumeLayout(false);
+            this.splitContainerMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
+            this.splitContainerMain.ResumeLayout(false);
+            this.splitContainerLeft.Panel1.ResumeLayout(false);
+            this.splitContainerLeft.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerLeft)).EndInit();
+            this.splitContainerLeft.ResumeLayout(false);
             this.LogGroup.ResumeLayout(false);
+            this.PathsGroup.ResumeLayout(false);
+            this.splitContainerRight.Panel1.ResumeLayout(false);
+            this.splitContainerRight.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerRight)).EndInit();
+            this.splitContainerRight.ResumeLayout(false);
             this.BucketsGroup.ResumeLayout(false);
             this.BucketsGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BucketLogoImage)).EndInit();
@@ -401,28 +503,25 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.SplitContainer splitContainerMain;
+        private System.Windows.Forms.SplitContainer splitContainerLeft;
+        private System.Windows.Forms.SplitContainer splitContainerRight;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.GroupBox LogGroup;
+        private System.Windows.Forms.RichTextBox LogText;
         private System.Windows.Forms.GroupBox PathsGroup;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button ScanPathButton;
         private System.Windows.Forms.Button RemovePathButton;
         private System.Windows.Forms.Button AddPathButton;
         private System.Windows.Forms.ListBox PathsList;
-        private System.Windows.Forms.GroupBox LogGroup;
-        private System.Windows.Forms.RichTextBox LogText;
-        private System.Windows.Forms.GroupBox BucketsGroup;
         private System.Windows.Forms.GroupBox EmulatorsGroup;
-        private System.Windows.Forms.Label BucketNameLabel;
-        private System.Windows.Forms.ListBox BucketsList;
         private System.Windows.Forms.DataGridView EmulatorsTable;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Path;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Emulator;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentVersion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NewVersion;
-        private System.Windows.Forms.Label BucketNameText;
-        private System.Windows.Forms.Label BucketHomeText;
-        private System.Windows.Forms.Label BucketHomeLabel;
-        private System.Windows.Forms.Label BucketLicenseText;
-        private System.Windows.Forms.Label BucketLicenseLabel;
+        private System.Windows.Forms.GroupBox BucketsGroup;
+        private System.Windows.Forms.TextBox BucketDescriptionText;
+        private System.Windows.Forms.Label BucketLogoLabel;
+        private System.Windows.Forms.PictureBox BucketLogoImage;
         private System.Windows.Forms.Label BucketDescriptionLabel;
         private System.Windows.Forms.Label BucketVersionText;
         private System.Windows.Forms.Label BucketVersionLabel;
@@ -430,10 +529,17 @@
         private System.Windows.Forms.Label BucketsLoadedLabel;
         private System.Windows.Forms.Label EmulatorsCountText;
         private System.Windows.Forms.Label EmulatorsCountLabel;
-        private System.Windows.Forms.Label BucketLogoLabel;
-        private System.Windows.Forms.PictureBox BucketLogoImage;
-        private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.TextBox BucketDescriptionText;
+        private System.Windows.Forms.Label BucketHomeText;
+        private System.Windows.Forms.Label BucketHomeLabel;
+        private System.Windows.Forms.Label BucketLicenseText;
+        private System.Windows.Forms.Label BucketLicenseLabel;
+        private System.Windows.Forms.Label BucketNameText;
+        private System.Windows.Forms.Label BucketNameLabel;
+        private System.Windows.Forms.ListBox BucketsList;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Path;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emulator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentVersion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NewVersion;
     }
 }
-
