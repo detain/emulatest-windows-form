@@ -498,7 +498,7 @@
             // 
             this.Select.HeaderText = "";
             this.Select.Name = "Select";
-            this.Select.ReadOnly = true;
+            this.Select.ReadOnly = false;
             this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // MainWindow
