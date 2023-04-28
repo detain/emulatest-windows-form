@@ -41,32 +41,34 @@
             this.PathsList = new System.Windows.Forms.ListBox();
             this.splitContainerRight = new System.Windows.Forms.SplitContainer();
             this.BucketsGroup = new System.Windows.Forms.GroupBox();
-            this.BucketDescriptionText = new System.Windows.Forms.TextBox();
-            this.BucketLogoLabel = new System.Windows.Forms.Label();
+            this.BucketsTable = new System.Windows.Forms.TableLayoutPanel();
+            this.BucketsList = new System.Windows.Forms.ListBox();
             this.BucketLogoImage = new System.Windows.Forms.PictureBox();
-            this.BucketDescriptionLabel = new System.Windows.Forms.Label();
-            this.BucketVersionText = new System.Windows.Forms.Label();
-            this.BucketVersionLabel = new System.Windows.Forms.Label();
-            this.BucketsLoadedText = new System.Windows.Forms.Label();
+            this.BucketDescriptionText = new System.Windows.Forms.TextBox();
             this.BucketsLoadedLabel = new System.Windows.Forms.Label();
-            this.EmulatorsCountText = new System.Windows.Forms.Label();
+            this.BucketLogoLabel = new System.Windows.Forms.Label();
+            this.BucketsLoadedText = new System.Windows.Forms.Label();
             this.EmulatorsCountLabel = new System.Windows.Forms.Label();
-            this.BucketHomeText = new System.Windows.Forms.Label();
-            this.BucketHomeLabel = new System.Windows.Forms.Label();
-            this.BucketLicenseText = new System.Windows.Forms.Label();
-            this.BucketLicenseLabel = new System.Windows.Forms.Label();
-            this.BucketNameText = new System.Windows.Forms.Label();
+            this.BucketDescriptionLabel = new System.Windows.Forms.Label();
+            this.EmulatorsCountText = new System.Windows.Forms.Label();
             this.BucketNameLabel = new System.Windows.Forms.Label();
+            this.BucketLicenseLabel = new System.Windows.Forms.Label();
+            this.BucketHomeLabel = new System.Windows.Forms.Label();
+            this.BucketVersionLabel = new System.Windows.Forms.Label();
+            this.BucketVersionText = new System.Windows.Forms.Label();
+            this.BucketHomeText = new System.Windows.Forms.Label();
+            this.BucketLicenseText = new System.Windows.Forms.Label();
+            this.BucketNameText = new System.Windows.Forms.Label();
             this.EmulatorsGroup = new System.Windows.Forms.GroupBox();
             this.EmulatorsTable = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.BucketsTable = new System.Windows.Forms.TableLayoutPanel();
-            this.BucketsList = new System.Windows.Forms.ListBox();
-            this.NewVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrentVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Emulator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emulator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NewVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -82,10 +84,10 @@
             this.splitContainerRight.Panel2.SuspendLayout();
             this.splitContainerRight.SuspendLayout();
             this.BucketsGroup.SuspendLayout();
+            this.BucketsTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BucketLogoImage)).BeginInit();
             this.EmulatorsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmulatorsTable)).BeginInit();
-            this.BucketsTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainerMain
@@ -148,6 +150,8 @@
             // PathsGroup
             // 
             this.PathsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PathsGroup.Controls.Add(this.LoadButton);
+            this.PathsGroup.Controls.Add(this.SaveButton);
             this.PathsGroup.Controls.Add(this.UpdateButton);
             this.PathsGroup.Controls.Add(this.ScanPathButton);
             this.PathsGroup.Controls.Add(this.RemovePathButton);
@@ -240,188 +244,6 @@
             this.BucketsGroup.TabStop = false;
             this.BucketsGroup.Text = "Emulators Database";
             // 
-            // BucketDescriptionText
-            // 
-            this.BucketDescriptionText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BucketDescriptionText.Location = new System.Drawing.Point(529, 3);
-            this.BucketDescriptionText.Multiline = true;
-            this.BucketDescriptionText.Name = "BucketDescriptionText";
-            this.BucketDescriptionText.ReadOnly = true;
-            this.BucketsTable.SetRowSpan(this.BucketDescriptionText, 3);
-            this.BucketDescriptionText.Size = new System.Drawing.Size(176, 111);
-            this.BucketDescriptionText.TabIndex = 17;
-            // 
-            // BucketLogoLabel
-            // 
-            this.BucketLogoLabel.AutoSize = true;
-            this.BucketLogoLabel.Location = new System.Drawing.Point(429, 117);
-            this.BucketLogoLabel.Name = "BucketLogoLabel";
-            this.BucketLogoLabel.Size = new System.Drawing.Size(31, 13);
-            this.BucketLogoLabel.TabIndex = 16;
-            this.BucketLogoLabel.Text = "Logo";
-            // 
-            // BucketLogoImage
-            // 
-            this.BucketLogoImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BucketLogoImage.Location = new System.Drawing.Point(529, 120);
-            this.BucketLogoImage.Name = "BucketLogoImage";
-            this.BucketsTable.SetRowSpan(this.BucketLogoImage, 3);
-            this.BucketLogoImage.Size = new System.Drawing.Size(176, 111);
-            this.BucketLogoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.BucketLogoImage.TabIndex = 15;
-            this.BucketLogoImage.TabStop = false;
-            // 
-            // BucketDescriptionLabel
-            // 
-            this.BucketDescriptionLabel.AutoSize = true;
-            this.BucketDescriptionLabel.Location = new System.Drawing.Point(429, 0);
-            this.BucketDescriptionLabel.Name = "BucketDescriptionLabel";
-            this.BucketDescriptionLabel.Size = new System.Drawing.Size(60, 13);
-            this.BucketDescriptionLabel.TabIndex = 13;
-            this.BucketDescriptionLabel.Text = "Description";
-            // 
-            // BucketVersionText
-            // 
-            this.BucketVersionText.AutoSize = true;
-            this.BucketVersionText.Location = new System.Drawing.Point(248, 117);
-            this.BucketVersionText.Name = "BucketVersionText";
-            this.BucketVersionText.Size = new System.Drawing.Size(13, 13);
-            this.BucketVersionText.TabIndex = 12;
-            this.BucketVersionText.Text = "v";
-            // 
-            // BucketVersionLabel
-            // 
-            this.BucketVersionLabel.AutoSize = true;
-            this.BucketVersionLabel.Location = new System.Drawing.Point(148, 117);
-            this.BucketVersionLabel.Name = "BucketVersionLabel";
-            this.BucketVersionLabel.Size = new System.Drawing.Size(42, 13);
-            this.BucketVersionLabel.TabIndex = 11;
-            this.BucketVersionLabel.Text = "Version";
-            // 
-            // BucketsLoadedText
-            // 
-            this.BucketsLoadedText.AutoSize = true;
-            this.BucketsLoadedText.Location = new System.Drawing.Point(248, 195);
-            this.BucketsLoadedText.Name = "BucketsLoadedText";
-            this.BucketsLoadedText.Size = new System.Drawing.Size(13, 13);
-            this.BucketsLoadedText.TabIndex = 10;
-            this.BucketsLoadedText.Text = "0";
-            // 
-            // BucketsLoadedLabel
-            // 
-            this.BucketsLoadedLabel.AutoSize = true;
-            this.BucketsLoadedLabel.Location = new System.Drawing.Point(148, 195);
-            this.BucketsLoadedLabel.Name = "BucketsLoadedLabel";
-            this.BucketsLoadedLabel.Size = new System.Drawing.Size(56, 13);
-            this.BucketsLoadedLabel.TabIndex = 9;
-            this.BucketsLoadedLabel.Text = "# Buckets";
-            // 
-            // EmulatorsCountText
-            // 
-            this.EmulatorsCountText.AutoSize = true;
-            this.EmulatorsCountText.Location = new System.Drawing.Point(248, 156);
-            this.EmulatorsCountText.Name = "EmulatorsCountText";
-            this.EmulatorsCountText.Size = new System.Drawing.Size(13, 13);
-            this.EmulatorsCountText.TabIndex = 8;
-            this.EmulatorsCountText.Text = "0";
-            // 
-            // EmulatorsCountLabel
-            // 
-            this.EmulatorsCountLabel.AutoSize = true;
-            this.EmulatorsCountLabel.Location = new System.Drawing.Point(148, 156);
-            this.EmulatorsCountLabel.Name = "EmulatorsCountLabel";
-            this.EmulatorsCountLabel.Size = new System.Drawing.Size(63, 13);
-            this.EmulatorsCountLabel.TabIndex = 7;
-            this.EmulatorsCountLabel.Text = "# Emulators";
-            // 
-            // BucketHomeText
-            // 
-            this.BucketHomeText.AutoSize = true;
-            this.BucketHomeText.Location = new System.Drawing.Point(248, 78);
-            this.BucketHomeText.Name = "BucketHomeText";
-            this.BucketHomeText.Size = new System.Drawing.Size(38, 13);
-            this.BucketHomeText.TabIndex = 6;
-            this.BucketHomeText.Text = "http://";
-            // 
-            // BucketHomeLabel
-            // 
-            this.BucketHomeLabel.AutoSize = true;
-            this.BucketHomeLabel.Location = new System.Drawing.Point(148, 78);
-            this.BucketHomeLabel.Name = "BucketHomeLabel";
-            this.BucketHomeLabel.Size = new System.Drawing.Size(63, 13);
-            this.BucketHomeLabel.TabIndex = 5;
-            this.BucketHomeLabel.Text = "Home Page";
-            // 
-            // BucketLicenseText
-            // 
-            this.BucketLicenseText.AutoSize = true;
-            this.BucketLicenseText.Location = new System.Drawing.Point(248, 39);
-            this.BucketLicenseText.Name = "BucketLicenseText";
-            this.BucketLicenseText.Size = new System.Drawing.Size(53, 13);
-            this.BucketLicenseText.TabIndex = 4;
-            this.BucketLicenseText.Text = "Unknown";
-            // 
-            // BucketLicenseLabel
-            // 
-            this.BucketLicenseLabel.AutoSize = true;
-            this.BucketLicenseLabel.Location = new System.Drawing.Point(148, 39);
-            this.BucketLicenseLabel.Name = "BucketLicenseLabel";
-            this.BucketLicenseLabel.Size = new System.Drawing.Size(44, 13);
-            this.BucketLicenseLabel.TabIndex = 3;
-            this.BucketLicenseLabel.Text = "License";
-            // 
-            // BucketNameText
-            // 
-            this.BucketNameText.AutoSize = true;
-            this.BucketNameText.Location = new System.Drawing.Point(248, 0);
-            this.BucketNameText.Name = "BucketNameText";
-            this.BucketNameText.Size = new System.Drawing.Size(74, 13);
-            this.BucketNameText.TabIndex = 2;
-            this.BucketNameText.Text = "none selected";
-            // 
-            // BucketNameLabel
-            // 
-            this.BucketNameLabel.AutoSize = true;
-            this.BucketNameLabel.Location = new System.Drawing.Point(148, 0);
-            this.BucketNameLabel.Name = "BucketNameLabel";
-            this.BucketNameLabel.Size = new System.Drawing.Size(35, 13);
-            this.BucketNameLabel.TabIndex = 1;
-            this.BucketNameLabel.Text = "Name";
-            // 
-            // EmulatorsGroup
-            // 
-            this.EmulatorsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.EmulatorsGroup.Controls.Add(this.EmulatorsTable);
-            this.EmulatorsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmulatorsGroup.Location = new System.Drawing.Point(0, 0);
-            this.EmulatorsGroup.Name = "EmulatorsGroup";
-            this.EmulatorsGroup.Size = new System.Drawing.Size(714, 256);
-            this.EmulatorsGroup.TabIndex = 5;
-            this.EmulatorsGroup.TabStop = false;
-            this.EmulatorsGroup.Text = "Discovered Emulators";
-            // 
-            // EmulatorsTable
-            // 
-            this.EmulatorsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmulatorsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmulatorsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Select,
-            this.Path,
-            this.Emulator,
-            this.CurrentVersion,
-            this.NewVersion});
-            this.EmulatorsTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmulatorsTable.Location = new System.Drawing.Point(3, 16);
-            this.EmulatorsTable.Name = "EmulatorsTable";
-            this.EmulatorsTable.ReadOnly = true;
-            this.EmulatorsTable.Size = new System.Drawing.Size(708, 237);
-            this.EmulatorsTable.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // BucketsTable
             // 
             this.BucketsTable.ColumnCount = 5;
@@ -470,36 +292,239 @@
             this.BucketsList.Size = new System.Drawing.Size(139, 228);
             this.BucketsList.TabIndex = 0;
             // 
-            // NewVersion
+            // BucketLogoImage
             // 
-            this.NewVersion.HeaderText = "New Version";
-            this.NewVersion.Name = "NewVersion";
-            this.NewVersion.ReadOnly = true;
+            this.BucketLogoImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BucketLogoImage.Location = new System.Drawing.Point(529, 120);
+            this.BucketLogoImage.Name = "BucketLogoImage";
+            this.BucketsTable.SetRowSpan(this.BucketLogoImage, 3);
+            this.BucketLogoImage.Size = new System.Drawing.Size(176, 111);
+            this.BucketLogoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.BucketLogoImage.TabIndex = 15;
+            this.BucketLogoImage.TabStop = false;
             // 
-            // CurrentVersion
+            // BucketDescriptionText
             // 
-            this.CurrentVersion.HeaderText = "Current Version";
-            this.CurrentVersion.Name = "CurrentVersion";
-            this.CurrentVersion.ReadOnly = true;
+            this.BucketDescriptionText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BucketDescriptionText.Location = new System.Drawing.Point(529, 3);
+            this.BucketDescriptionText.Multiline = true;
+            this.BucketDescriptionText.Name = "BucketDescriptionText";
+            this.BucketDescriptionText.ReadOnly = true;
+            this.BucketsTable.SetRowSpan(this.BucketDescriptionText, 3);
+            this.BucketDescriptionText.Size = new System.Drawing.Size(176, 111);
+            this.BucketDescriptionText.TabIndex = 17;
             // 
-            // Emulator
+            // BucketsLoadedLabel
             // 
-            this.Emulator.HeaderText = "Emulator";
-            this.Emulator.Name = "Emulator";
-            this.Emulator.ReadOnly = true;
+            this.BucketsLoadedLabel.AutoSize = true;
+            this.BucketsLoadedLabel.Location = new System.Drawing.Point(148, 195);
+            this.BucketsLoadedLabel.Name = "BucketsLoadedLabel";
+            this.BucketsLoadedLabel.Size = new System.Drawing.Size(56, 13);
+            this.BucketsLoadedLabel.TabIndex = 9;
+            this.BucketsLoadedLabel.Text = "# Buckets";
+            // 
+            // BucketLogoLabel
+            // 
+            this.BucketLogoLabel.AutoSize = true;
+            this.BucketLogoLabel.Location = new System.Drawing.Point(429, 117);
+            this.BucketLogoLabel.Name = "BucketLogoLabel";
+            this.BucketLogoLabel.Size = new System.Drawing.Size(31, 13);
+            this.BucketLogoLabel.TabIndex = 16;
+            this.BucketLogoLabel.Text = "Logo";
+            // 
+            // BucketsLoadedText
+            // 
+            this.BucketsLoadedText.AutoSize = true;
+            this.BucketsLoadedText.Location = new System.Drawing.Point(248, 195);
+            this.BucketsLoadedText.Name = "BucketsLoadedText";
+            this.BucketsLoadedText.Size = new System.Drawing.Size(13, 13);
+            this.BucketsLoadedText.TabIndex = 10;
+            this.BucketsLoadedText.Text = "0";
+            // 
+            // EmulatorsCountLabel
+            // 
+            this.EmulatorsCountLabel.AutoSize = true;
+            this.EmulatorsCountLabel.Location = new System.Drawing.Point(148, 156);
+            this.EmulatorsCountLabel.Name = "EmulatorsCountLabel";
+            this.EmulatorsCountLabel.Size = new System.Drawing.Size(63, 13);
+            this.EmulatorsCountLabel.TabIndex = 7;
+            this.EmulatorsCountLabel.Text = "# Emulators";
+            // 
+            // BucketDescriptionLabel
+            // 
+            this.BucketDescriptionLabel.AutoSize = true;
+            this.BucketDescriptionLabel.Location = new System.Drawing.Point(429, 0);
+            this.BucketDescriptionLabel.Name = "BucketDescriptionLabel";
+            this.BucketDescriptionLabel.Size = new System.Drawing.Size(60, 13);
+            this.BucketDescriptionLabel.TabIndex = 13;
+            this.BucketDescriptionLabel.Text = "Description";
+            // 
+            // EmulatorsCountText
+            // 
+            this.EmulatorsCountText.AutoSize = true;
+            this.EmulatorsCountText.Location = new System.Drawing.Point(248, 156);
+            this.EmulatorsCountText.Name = "EmulatorsCountText";
+            this.EmulatorsCountText.Size = new System.Drawing.Size(13, 13);
+            this.EmulatorsCountText.TabIndex = 8;
+            this.EmulatorsCountText.Text = "0";
+            // 
+            // BucketNameLabel
+            // 
+            this.BucketNameLabel.AutoSize = true;
+            this.BucketNameLabel.Location = new System.Drawing.Point(148, 0);
+            this.BucketNameLabel.Name = "BucketNameLabel";
+            this.BucketNameLabel.Size = new System.Drawing.Size(35, 13);
+            this.BucketNameLabel.TabIndex = 1;
+            this.BucketNameLabel.Text = "Name";
+            // 
+            // BucketLicenseLabel
+            // 
+            this.BucketLicenseLabel.AutoSize = true;
+            this.BucketLicenseLabel.Location = new System.Drawing.Point(148, 39);
+            this.BucketLicenseLabel.Name = "BucketLicenseLabel";
+            this.BucketLicenseLabel.Size = new System.Drawing.Size(44, 13);
+            this.BucketLicenseLabel.TabIndex = 3;
+            this.BucketLicenseLabel.Text = "License";
+            // 
+            // BucketHomeLabel
+            // 
+            this.BucketHomeLabel.AutoSize = true;
+            this.BucketHomeLabel.Location = new System.Drawing.Point(148, 78);
+            this.BucketHomeLabel.Name = "BucketHomeLabel";
+            this.BucketHomeLabel.Size = new System.Drawing.Size(63, 13);
+            this.BucketHomeLabel.TabIndex = 5;
+            this.BucketHomeLabel.Text = "Home Page";
+            // 
+            // BucketVersionLabel
+            // 
+            this.BucketVersionLabel.AutoSize = true;
+            this.BucketVersionLabel.Location = new System.Drawing.Point(148, 117);
+            this.BucketVersionLabel.Name = "BucketVersionLabel";
+            this.BucketVersionLabel.Size = new System.Drawing.Size(42, 13);
+            this.BucketVersionLabel.TabIndex = 11;
+            this.BucketVersionLabel.Text = "Version";
+            // 
+            // BucketVersionText
+            // 
+            this.BucketVersionText.AutoSize = true;
+            this.BucketVersionText.Location = new System.Drawing.Point(248, 117);
+            this.BucketVersionText.Name = "BucketVersionText";
+            this.BucketVersionText.Size = new System.Drawing.Size(13, 13);
+            this.BucketVersionText.TabIndex = 12;
+            this.BucketVersionText.Text = "v";
+            // 
+            // BucketHomeText
+            // 
+            this.BucketHomeText.AutoSize = true;
+            this.BucketHomeText.Location = new System.Drawing.Point(248, 78);
+            this.BucketHomeText.Name = "BucketHomeText";
+            this.BucketHomeText.Size = new System.Drawing.Size(38, 13);
+            this.BucketHomeText.TabIndex = 6;
+            this.BucketHomeText.Text = "http://";
+            // 
+            // BucketLicenseText
+            // 
+            this.BucketLicenseText.AutoSize = true;
+            this.BucketLicenseText.Location = new System.Drawing.Point(248, 39);
+            this.BucketLicenseText.Name = "BucketLicenseText";
+            this.BucketLicenseText.Size = new System.Drawing.Size(53, 13);
+            this.BucketLicenseText.TabIndex = 4;
+            this.BucketLicenseText.Text = "Unknown";
+            // 
+            // BucketNameText
+            // 
+            this.BucketNameText.AutoSize = true;
+            this.BucketNameText.Location = new System.Drawing.Point(248, 0);
+            this.BucketNameText.Name = "BucketNameText";
+            this.BucketNameText.Size = new System.Drawing.Size(74, 13);
+            this.BucketNameText.TabIndex = 2;
+            this.BucketNameText.Text = "none selected";
+            // 
+            // EmulatorsGroup
+            // 
+            this.EmulatorsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EmulatorsGroup.Controls.Add(this.EmulatorsTable);
+            this.EmulatorsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmulatorsGroup.Location = new System.Drawing.Point(0, 0);
+            this.EmulatorsGroup.Name = "EmulatorsGroup";
+            this.EmulatorsGroup.Size = new System.Drawing.Size(714, 256);
+            this.EmulatorsGroup.TabIndex = 5;
+            this.EmulatorsGroup.TabStop = false;
+            this.EmulatorsGroup.Text = "Discovered Emulators";
+            // 
+            // EmulatorsTable
+            // 
+            this.EmulatorsTable.AllowUserToOrderColumns = true;
+            this.EmulatorsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmulatorsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmulatorsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
+            this.Path,
+            this.Emulator,
+            this.CurrentVersion,
+            this.NewVersion});
+            this.EmulatorsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmulatorsTable.Location = new System.Drawing.Point(3, 16);
+            this.EmulatorsTable.Name = "EmulatorsTable";
+            this.EmulatorsTable.Size = new System.Drawing.Size(708, 237);
+            this.EmulatorsTable.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(272, 137);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.TabIndex = 5;
+            this.SaveButton.Text = "Save Config";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            // 
+            // LoadButton
+            // 
+            this.LoadButton.Location = new System.Drawing.Point(272, 167);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(75, 23);
+            this.LoadButton.TabIndex = 6;
+            this.LoadButton.Text = "Load Config";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            // 
+            // Select
+            // 
+            this.Select.FillWeight = 10F;
+            this.Select.HeaderText = "";
+            this.Select.Name = "Select";
             // 
             // Path
             // 
+            this.Path.FillWeight = 40F;
             this.Path.HeaderText = "Path";
             this.Path.Name = "Path";
             this.Path.ReadOnly = true;
             // 
-            // Select
+            // Emulator
             // 
-            this.Select.HeaderText = "";
-            this.Select.Name = "Select";
-            this.Select.ReadOnly = false;
-            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Emulator.FillWeight = 20F;
+            this.Emulator.HeaderText = "Emulator";
+            this.Emulator.Name = "Emulator";
+            this.Emulator.ReadOnly = true;
+            // 
+            // CurrentVersion
+            // 
+            this.CurrentVersion.FillWeight = 15F;
+            this.CurrentVersion.HeaderText = "Current Version";
+            this.CurrentVersion.Name = "CurrentVersion";
+            this.CurrentVersion.ReadOnly = true;
+            // 
+            // NewVersion
+            // 
+            this.NewVersion.FillWeight = 15F;
+            this.NewVersion.HeaderText = "New Version";
+            this.NewVersion.Name = "NewVersion";
+            this.NewVersion.ReadOnly = true;
             // 
             // MainWindow
             // 
@@ -527,11 +552,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerRight)).EndInit();
             this.splitContainerRight.ResumeLayout(false);
             this.BucketsGroup.ResumeLayout(false);
+            this.BucketsTable.ResumeLayout(false);
+            this.BucketsTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BucketLogoImage)).EndInit();
             this.EmulatorsGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmulatorsTable)).EndInit();
-            this.BucketsTable.ResumeLayout(false);
-            this.BucketsTable.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -571,6 +596,8 @@
         private System.Windows.Forms.Label BucketNameLabel;
         private System.Windows.Forms.TableLayoutPanel BucketsTable;
         private System.Windows.Forms.ListBox BucketsList;
+        private System.Windows.Forms.Button LoadButton;
+        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn Path;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emulator;
